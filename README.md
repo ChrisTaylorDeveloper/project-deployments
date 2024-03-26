@@ -18,6 +18,8 @@ or build and run a jar
 java -jar target/gs-serving-web-content-0.1.0.jar
 ```
 
+Finally, visit http://localhost:8080/greeting
+
 See  
 https://spring.io/guides/topicals/spring-boot-docker  
 https://spring.io/guides/gs/serving-web-content
