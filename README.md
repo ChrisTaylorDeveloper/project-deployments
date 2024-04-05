@@ -20,8 +20,14 @@ or build and run a jar
 ./mvnw clean package
 java -jar target/serving-web-content-0.0.1-SNAPSHOT.jar
 ```
-
 Finally, visit http://localhost:8080/greeting
+
+or, to run detached on lemp2404, for example
+```
+docker run -d -it --rm --name sb-proj \
+-v "$(pwd)":/usr/src/sb -w /usr/src/sb -p 82:8080 \
+eclipse-temurin:17-jdk-alpine sh -c 'cd Serving-Web-Content-MVC && ./mvnw spring-boot:run'
+```
 
 See  
 https://spring.io/guides/topicals/spring-boot-docker  
