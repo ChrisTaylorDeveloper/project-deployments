@@ -24,6 +24,8 @@ Finally, visit http://localhost:8080/greeting
 
 or, to run detached on lemp2404, for example
 ```
+cd project-deployments
+
 docker run -d -it --rm --name sb-proj \
 -v "$(pwd)":/usr/src/sb -w /usr/src/sb -p 82:8080 \
 eclipse-temurin:17-jdk-alpine sh -c 'cd Serving-Web-Content-MVC && ./mvnw spring-boot:run'
