@@ -13,8 +13,6 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -23,8 +21,6 @@
                 <tr>
                     <td><?= $this->Number->format($domainRegistrationStatus->id) ?></td>
                     <td><?= h($domainRegistrationStatus->name) ?></td>
-                    <td><?= h($domainRegistrationStatus->created) ?></td>
-                    <td><?= h($domainRegistrationStatus->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $domainRegistrationStatus->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $domainRegistrationStatus->id]) ?>

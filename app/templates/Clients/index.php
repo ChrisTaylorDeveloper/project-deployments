@@ -14,8 +14,6 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
                     <th><?= $this->Paginator->sort('description') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -25,8 +23,6 @@
                     <td><?= $this->Number->format($client->id) ?></td>
                     <td><?= h($client->name) ?></td>
                     <td><?= h($client->description) ?></td>
-                    <td><?= h($client->created) ?></td>
-                    <td><?= h($client->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $client->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $client->id]) ?>

@@ -16,8 +16,6 @@
                     <th><?= $this->Paginator->sort('host_id') ?></th>
                     <th><?= $this->Paginator->sort('url_id') ?></th>
                     <th><?= $this->Paginator->sort('environment_id') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -29,8 +27,6 @@
                     <td><?= $deployment->hasValue('host') ? $this->Html->link($deployment->host->name, ['controller' => 'Hosts', 'action' => 'view', $deployment->host->id]) : '' ?></td>
                     <td><?= $deployment->hasValue('url') ? $this->Html->link($deployment->url->id, ['controller' => 'Urls', 'action' => 'view', $deployment->url->id]) : '' ?></td>
                     <td><?= $deployment->hasValue('environment') ? $this->Html->link($deployment->environment->name, ['controller' => 'Environments', 'action' => 'view', $deployment->environment->id]) : '' ?></td>
-                    <td><?= h($deployment->created) ?></td>
-                    <td><?= h($deployment->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $deployment->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $deployment->id]) ?>
