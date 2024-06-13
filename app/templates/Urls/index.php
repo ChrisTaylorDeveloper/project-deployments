@@ -17,8 +17,6 @@
                     <th><?= $this->Paginator->sort('sub_domain') ?></th>
                     <th><?= $this->Paginator->sort('port') ?></th>
                     <th><?= $this->Paginator->sort('path') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -31,8 +29,6 @@
                     <td><?= h($url->sub_domain) ?></td>
                     <td><?= $url->port === null ? '' : $this->Number->format($url->port) ?></td>
                     <td><?= h($url->path) ?></td>
-                    <td><?= h($url->created) ?></td>
-                    <td><?= h($url->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $url->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $url->id]) ?>

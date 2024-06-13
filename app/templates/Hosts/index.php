@@ -13,8 +13,6 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -23,8 +21,6 @@
                 <tr>
                     <td><?= $this->Number->format($host->id) ?></td>
                     <td><?= h($host->name) ?></td>
-                    <td><?= h($host->created) ?></td>
-                    <td><?= h($host->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $host->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $host->id]) ?>

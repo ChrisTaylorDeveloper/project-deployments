@@ -13,8 +13,6 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -23,8 +21,6 @@
                 <tr>
                     <td><?= $this->Number->format($protocol->id) ?></td>
                     <td><?= h($protocol->name) ?></td>
-                    <td><?= h($protocol->created) ?></td>
-                    <td><?= h($protocol->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $protocol->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $protocol->id]) ?>

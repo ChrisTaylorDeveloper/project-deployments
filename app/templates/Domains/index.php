@@ -14,8 +14,6 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('registrar_id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -25,8 +23,6 @@
                     <td><?= $this->Number->format($domain->id) ?></td>
                     <td><?= $domain->hasValue('registrar') ? $this->Html->link($domain->registrar->name, ['controller' => 'Registrars', 'action' => 'view', $domain->registrar->id]) : '' ?></td>
                     <td><?= h($domain->name) ?></td>
-                    <td><?= h($domain->created) ?></td>
-                    <td><?= h($domain->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $domain->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $domain->id]) ?>
