@@ -7,6 +7,7 @@
 <div class="deployments index content">
     <?= $this->Html->link(__('New Deployment'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Deployments') ?></h3>
+    <p><strong>Deployment</strong>: an instance of a project running on a host.</p>
     <div class="table-responsive">
         <table>
             <thead>
