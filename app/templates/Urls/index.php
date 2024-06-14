@@ -13,8 +13,8 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('protocol_id') ?></th>
-                    <th><?= $this->Paginator->sort('domain_id') ?></th>
                     <th><?= $this->Paginator->sort('sub_domain') ?></th>
+                    <th><?= $this->Paginator->sort('domain_id') ?></th>
                     <th><?= $this->Paginator->sort('port') ?></th>
                     <th><?= $this->Paginator->sort('path') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
@@ -25,8 +25,8 @@
                 <tr>
                     <td><?= $this->Number->format($url->id) ?></td>
                     <td><?= $url->hasValue('protocol') ? $this->Html->link($url->protocol->name, ['controller' => 'Protocols', 'action' => 'view', $url->protocol->id]) : '' ?></td>
-                    <td><?= $url->hasValue('domain') ? $this->Html->link($url->domain->name, ['controller' => 'Domains', 'action' => 'view', $url->domain->id]) : '' ?></td>
                     <td><?= h($url->sub_domain) ?></td>
+                    <td><?= $url->hasValue('domain') ? $this->Html->link($url->domain->name, ['controller' => 'Domains', 'action' => 'view', $url->domain->id]) : '' ?></td>
                     <td><?= $url->port === null ? '' : $this->Number->format($url->port) ?></td>
                     <td><?= h($url->path) ?></td>
                     <td class="actions">
