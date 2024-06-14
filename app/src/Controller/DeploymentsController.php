@@ -18,7 +18,15 @@ class DeploymentsController extends AppController
     public function index()
     {
         $query = $this->Deployments->find()
-            ->contain(['Projects', 'Hosts', 'Urls', 'Environments']);
+            ->contain(
+                [
+                    'Projects',
+                    'Hosts',
+                    'Urls' => ['Protocols', 'Domains'],
+                    'Environments'
+                ]
+            );
+
         $deployments = $this->paginate($query);
 
         $this->set(compact('deployments'));
