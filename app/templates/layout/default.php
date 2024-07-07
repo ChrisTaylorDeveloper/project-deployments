@@ -42,7 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?php echo $this->Html->link('Deployments', '/deployments'); ?>
             <?php echo $this->Html->link('Domains', '/domains'); ?>
             <?php echo $this->Html->link('Projects', '/projects'); ?>
-            <?php echo $this->Html->link('Urls', '/urls'); ?>
+            <?php echo $this->Html->link('URLs', '/urls'); ?>
             <?php echo $this->Html->link('Clients', '/clients'); ?>
         </div>
     </nav>
