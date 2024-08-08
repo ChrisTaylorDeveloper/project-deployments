@@ -39,6 +39,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="<?= $this->Url->build('/') ?>"><span>Project</span>Deployments</a>
         </div>
         <div class="top-nav-links">
+
+            <?php echo $this->Html->link('Developers Projects', '/developers-projects'); ?>
             <?php echo $this->Html->link('Deployments', '/deployments'); ?>
             <?php echo $this->Html->link('Domains', '/domains'); ?>
             <?php echo $this->Html->link('Projects', '/projects'); ?>
